@@ -1,0 +1,33 @@
+﻿@page "{id:int}"
+@model CadastroCliente2.Pages.Cliente.EditarModel
+@{
+}
+
+
+
+<form method="post">
+    <input type="hidden" asp-for="@Model.Cliente.Id" />
+    <div>
+        <label>Nome</label>
+        <input type="text" asp-for="Cliente!.Nome" />
+        <span asp-validation-for="Cliente.Nome" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="email" asp-for="Cliente!.Email" />
+        <span asp-validation-for="Cliente.Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label>CPF</label>
+        <input type="text" asp-for="Cliente!.CPF" />
+        <span asp-validation-for="Cliente.CPF" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Data de Nascimento</label>
+        <input type="datetime" asp-for="Cliente!.DtNascimento" />
+        <span asp-validation-for="Cliente.DtNascimento" class="text-danger"></span>
+    </div>
+    <input type="submit" value="Enviar!" />
+
+</form>
+

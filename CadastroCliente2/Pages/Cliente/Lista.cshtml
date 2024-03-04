@@ -1,0 +1,46 @@
+﻿@page
+@model CadastroCliente2.Pages.Cliente.ListaModel
+@{
+}
+
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">CPF</th>
+            <th scope="col">Data de Nascimento</th>
+            <th>Opções</th>
+    </tr>
+    </thead>
+
+    <tbody>
+        @{
+            var index = 1;
+        }
+    @foreach(var item in Model.Clientes)
+    {
+        <tr>
+            <td scope="row">@index</td>
+            <td>@item.Nome</td>
+            <td>@item.Email</td>
+            <td>@item.CPF</td>
+            <td>@item.DtNascimento</td>
+            <td>
+                <a href="/Cliente/Editar/@item.Id">
+                    Editar cliente
+                </a>
+                <a
+                    href="/Cliente/Excluir/@item.Id">
+                    Excluir cliente
+                </a>
+            </td>
+        </tr>
+        index++;
+
+    }
+    </tbody>
+</table>
+
