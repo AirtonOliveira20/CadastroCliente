@@ -13,6 +13,11 @@
         <span asp-validation-for="Cliente.Nome" class="text-danger"></span>
     </div>
     <div>
+        <label>Estado civil</label>
+        <input type="text" asp-for="Cliente!.EstadoCivil" />
+        <span asp-validation-for="Cliente.EstadoCivil" class="text-danger"></span>
+    </div>
+    <div>
         <label>Email</label>
         <input type="email" asp-for="Cliente!.Email" />
         <span asp-validation-for="Cliente.Email" class="text-danger"></span>

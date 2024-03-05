@@ -11,6 +11,10 @@ namespace CadastroCliente2.Model
         public String Nome { get; set; }
 
         [Required]
+        public String EstadoCivil { get; set; }
+
+        [Required]
+        [RegularExpression(@"^\d{3}\.\d{3}\.\d{3}-\d{2}$", ErrorMessage = "CPF inválido.")]
         public String CPF { get; set; }
 
         [Required]
